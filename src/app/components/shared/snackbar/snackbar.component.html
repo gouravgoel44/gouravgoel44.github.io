@@ -1,0 +1,18 @@
+<div class="flex">
+  <div class="data">
+    <span style="float: left;">{{ data }} </span>
+    <div class="dismiss" style="float: right;">
+      <button mat-icon-button (click)="snackBarRef.dismiss()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <button
+      style="float: right;"
+      mat-raised-button
+      color="primary"
+      (click)="snackBarRef.dismissWithAction()"
+    >
+      click
+    </button>
+  </div>
+</div>

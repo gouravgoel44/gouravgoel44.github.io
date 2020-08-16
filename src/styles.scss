@@ -9,13 +9,13 @@ body {
 /* ------------ container ------------ */
 .container {
   padding: 10px;
-  width: 380px;
+  width: 100%;
   margin: 0 auto;
 }
 
 /* ------------ header ------------ */
 .header {
-  width: 380px;
+  width: 100%;
   height: 200px;
   background-image: url("src/assets/img/bg2.jpg");
   background-size: 100% 200%;
@@ -50,9 +50,9 @@ body {
 
 /* ------------ content ------------ */
 .content {
-  width: 380px;
-  height: 350px;
-  max-height: 350px;
+  width: 100%; //for small screen
+  height: 67vh;
+  // max-height: 350px;
   background-color: #fff;
   overflow: auto;
 }
@@ -64,7 +64,7 @@ body {
   margin: 0;
 }
 .item {
-  width: 380px;
+  width: 100%;
   height: 45px;
   min-height: 45px;
   position: relative;
@@ -88,13 +88,13 @@ body {
 
   p.text {
     position: absolute;
-    padding: 0;
+    padding: 6px;
     margin: 0;
     font-size: 20px;
     left: 50px;
     top: 5px;
     background-color: #fff;
-    max-width: 285px;
+    max-width: 100%;
   }
 }
 
@@ -119,7 +119,7 @@ body {
 /* ------------ add item ------------ */
 .add-to-do {
   position: relative;
-  width: 360px;
+  width: 94%;
   height: 40px;
   background-color: #fff;
   padding: 10px;
@@ -135,7 +135,7 @@ body {
     position: absolute;
     left: 50px;
     height: 35px;
-    width: 310px;
+    width: 96%;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -162,4 +162,19 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-size: 20px;
   }
+}
+
+// .footer {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+// }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

@@ -11,23 +11,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class HomeComponent implements OnInit {
   @ViewChild('toDoList') toDoList: TodoListComponent;
 
-  constructor(public Pwa: PwaService, private snackBar: MatSnackBar) {}
+  constructor(public Pwa: PwaService) {}
 
-  ngOnInit(): void {
-    if (this.Pwa.promptEvent) {
-      let snackBarRef = this.snackBar.open('Add to Home Screen', 'Click');
-      snackBarRef.onAction().subscribe(() => {
-        this.installPwa();
-      });
-    }
-  }
+  ngOnInit(): void {}
 
   onAddItem(item: string): void {
     this.toDoList.addItemToList(item);
-  }
-
-  installPwa(): void {
-    this.Pwa.promptEvent.prompt();
   }
 
   onRefresh(): void {

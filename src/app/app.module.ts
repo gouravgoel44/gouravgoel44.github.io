@@ -11,6 +11,10 @@ import { TodoHeaderComponent } from './components/todo-header/todo-header.compon
 import { HomeComponent } from './components/home/home.component';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,18 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     TodoHeaderComponent,
     HomeComponent,
     SplashScreenComponent,
+    SnackbarComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
     MatSnackBarModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
