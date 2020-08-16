@@ -1,0 +1,7 @@
+<!-- <button *ngIf="Pwa.promptEvent" (click)="installPwa()">
+  Install
+</button> -->
+
+<app-todo-header (onRefresh)="onRefresh()"></app-todo-header>
+<app-todo-list #toDoList></app-todo-list>
+<app-add-todo-item (onAddItem)="onAddItem($event)"></app-add-todo-item>
