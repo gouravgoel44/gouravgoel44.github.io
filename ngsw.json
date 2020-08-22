@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598098115636,
+  "timestamp": 1598099469195,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
         "/assets/css/font-awesome.css",
