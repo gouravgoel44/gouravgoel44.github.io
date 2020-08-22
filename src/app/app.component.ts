@@ -1,20 +1,24 @@
-import { Component, OnInit, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { AddTodoItemComponent } from './components/add-todo-item/add-todo-item.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PwaService } from 'src/app/services/pwa.service';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'todo-app';
+  @ViewChild('toDoList') toDoList: TodoListComponent;
 
-  constructor(private injector: Injector) {}
+  constructor(public Pwa: PwaService) {}
 
-  ngOnInit() {
-    let ele = createCustomElement(AddTodoItemComponent, {
-      injector: this.injector,
-    });
-    customElements.define('custom-add-todo', ele);
+  onAddItem(item: string): void {
+    this.toDoList.addItemToList(item);
   }
+
+  onRefresh(): void {
+    this.toDoList.refresh();
+  }
+
+  ngOnInit() {}
 }
