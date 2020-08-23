@@ -1,7 +1,7 @@
 <div class="content">
   <ul id="list">
     <!-- // app-listing component -->
-    <li class="item" *ngFor="let item of itemList">
+    <li class="content__item" *ngFor="let item of itemList">
       <i
         class="fas fa-check-circle co"
         (click)="completeToDo(item)"
@@ -13,7 +13,7 @@
         (click)="completeToDo(item)"
         *ngIf="!item.done"
       ></i>
-      <p class="text">
+      <p class="content__text">
         <span *ngIf="!item.done">{{ item.name }}</span>
         <s *ngIf="item.done">{{ item.name }}</s>
       </p>

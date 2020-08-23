@@ -5,11 +5,6 @@ body {
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-body {
   padding: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.1);
@@ -25,8 +20,6 @@ body {
 
 /* ------------ header ------------ */
 .header {
-  // width: 100%;
-  // height: 200px;
   height: 30vh;
   background-image: url("src/assets/img/bg2.jpg");
   background-size: 100% 200%;
@@ -64,8 +57,6 @@ body {
 
 /* ------------ content ------------ */
 .content {
-  // width: 100%; //for small screen
-  // height: 67vh;
   height: 60vh;
   background-color: #fff;
   overflow: auto;
@@ -74,52 +65,52 @@ body {
     padding: 0;
     margin: 0;
   }
+}
 
-  .item {
-    width: 100%;
-    height: 45px;
-    min-height: 45px;
-    position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.content__item {
+  width: 100%;
+  height: 45px;
+  min-height: 45px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-    i.co {
-      position: absolute;
-      font-size: 25px;
-      padding-left: 5px;
-      left: 15px;
-      top: 10px;
-    }
-
-    i.co:hover {
-      cursor: pointer;
-    }
-
-    p.text {
-      position: absolute;
-      padding: 6px;
-      margin: 0;
-      font-size: 20px;
-      left: 50px;
-      top: 5px;
-      background-color: #fff;
-      max-width: 100%;
-    }
-
-    i.de {
-      position: absolute;
-      font-size: 25px;
-      right: 15px;
-      top: 10px;
-    }
-
-    i.de:hover {
-      color: #af0000;
-      cursor: pointer;
-    }
+  i.co {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
   }
+
+  i.co:hover {
+    cursor: pointer;
+  }
+
+  i.de {
+    position: absolute;
+    font-size: 25px;
+    right: 15px;
+    top: 10px;
+  }
+
+  i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+  }
+}
+
+.content__text {
+  position: absolute;
+  padding: 6px;
+  margin: 0;
+  font-size: 20px;
+  left: 50px;
+  top: 5px;
+  background-color: #fff;
+  max-width: 100%;
 }
 .content::-webkit-scrollbar {
   display: none;
@@ -136,8 +127,6 @@ body {
 /* ------------ add item ------------ */
 .add-to-do {
   position: relative;
-  // width: 94%;
-  // height: 40px;
   height: 10vh;
   background-color: #fff;
   padding: 10px;
@@ -153,7 +142,6 @@ body {
     position: absolute;
     left: 50px;
     height: 35px;
-    // width: 96%;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -180,18 +168,4 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-size: 20px;
   }
-}
-
-/* Block component */
-.btn {
-}
-
-/* Element that depends upon the block */
-.btn__price {
-}
-
-/* Modifier that changes the style of the block */
-.btn--orange {
-}
-.btn--big {
 }
