@@ -1,7 +1,13 @@
-<app-todo-header (onRefresh)="onRefresh()"></app-todo-header>
-<app-todo-list #toDoList></app-todo-list>
-<footer class="footer">
-  <app-add-todo-item (onAddItem)="onAddItem($event)"></app-add-todo-item>
-</footer>
-<app-splash-screen></app-splash-screen>
+<app-splash-screen
+  [show]="showSplash"
+  (hideSplash)="hideSplash()"
+></app-splash-screen>
+<div *ngIf="!showSplash">
+  <app-todo-header (onRefresh)="onRefresh()"></app-todo-header>
+  <app-todo-list #toDoList></app-todo-list>
+  <footer class="footer">
+    <app-add-todo-item (onAddItem)="onAddItem($event)"></app-add-todo-item>
+  </footer>
+</div>
+
 <router-outlet></router-outlet>

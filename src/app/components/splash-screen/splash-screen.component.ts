@@ -3,6 +3,9 @@ import {
   OnInit,
   ChangeDetectorRef,
   ApplicationRef,
+  Input,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 import { PwaService } from 'src/app/services/pwa.service';
 import { ChangeDetectionStrategy } from '@angular/core';
@@ -32,7 +35,9 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SplashScreenComponent implements OnInit {
-  show = true;
+  @Input() show;
+
+  @Output() hideSplash = new EventEmitter();
 
   constructor(
     private pwaService: PwaService,
@@ -45,5 +50,9 @@ export class SplashScreenComponent implements OnInit {
       this.show = result;
       this.cdr.detectChanges();
     });
+
+    setTimeout(() => {
+      this.hideSplash.emit();
+    }, 1000);
   }
 }

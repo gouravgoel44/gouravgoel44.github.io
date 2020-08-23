@@ -1,4 +1,14 @@
 /* ------------ ------------ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -15,8 +25,9 @@ body {
 
 /* ------------ header ------------ */
 .header {
-  width: 100%;
-  height: 200px;
+  // width: 100%;
+  // height: 200px;
+  height: 30vh;
   background-image: url("src/assets/img/bg2.jpg");
   background-size: 100% 200%;
   background-repeat: no-repeat;
@@ -53,8 +64,9 @@ body {
 
 /* ------------ content ------------ */
 .content {
-  width: 100%; //for small screen
-  height: 67vh;
+  // width: 100%; //for small screen
+  // height: 67vh;
+  height: 60vh;
   background-color: #fff;
   overflow: auto;
 
@@ -124,8 +136,9 @@ body {
 /* ------------ add item ------------ */
 .add-to-do {
   position: relative;
-  width: 94%;
-  height: 40px;
+  // width: 94%;
+  // height: 40px;
+  height: 10vh;
   background-color: #fff;
   padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -140,7 +153,7 @@ body {
     position: absolute;
     left: 50px;
     height: 35px;
-    width: 96%;
+    // width: 96%;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -169,11 +182,16 @@ body {
   }
 }
 
-html,
-body {
-  height: 100%;
+/* Block component */
+.btn {
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+/* Element that depends upon the block */
+.btn__price {
+}
+
+/* Modifier that changes the style of the block */
+.btn--orange {
+}
+.btn--big {
 }

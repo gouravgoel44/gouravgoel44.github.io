@@ -10,6 +10,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 export class AppComponent implements OnInit {
   @ViewChild('toDoList') toDoList: TodoListComponent;
 
+  showSplash = true;
+
   constructor(public Pwa: PwaService) {}
 
   onAddItem(item: string): void {
@@ -21,4 +23,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  hideSplash() {
+    this.showSplash = false;
+  }
 }
