@@ -1,4 +1,4 @@
-/* ------------ youtube.com/CodeExplained ------------ */
+/* ------------ ------------ */
 body {
   padding: 0;
   margin: 0;
@@ -29,16 +29,19 @@ body {
   position: absolute;
   right: 20px;
   top: 20px;
+
+  i {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+  }
 }
-.clear i {
-  font-size: 30px;
-  color: #fff;
-}
-.clear i:hover {
-  cursor: pointer;
-  text-shadow: 1px 3px 5px #000;
-  transform: rotate(45deg);
-}
+
 #date {
   position: absolute;
   bottom: 10px;
@@ -52,52 +55,63 @@ body {
 .content {
   width: 100%; //for small screen
   height: 67vh;
-  // max-height: 350px;
   background-color: #fff;
   overflow: auto;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .item {
+    width: 100%;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    i.co {
+      position: absolute;
+      font-size: 25px;
+      padding-left: 5px;
+      left: 15px;
+      top: 10px;
+    }
+
+    i.co:hover {
+      cursor: pointer;
+    }
+
+    p.text {
+      position: absolute;
+      padding: 6px;
+      margin: 0;
+      font-size: 20px;
+      left: 50px;
+      top: 5px;
+      background-color: #fff;
+      max-width: 100%;
+    }
+
+    i.de {
+      position: absolute;
+      font-size: 25px;
+      right: 15px;
+      top: 10px;
+    }
+
+    i.de:hover {
+      color: #af0000;
+      cursor: pointer;
+    }
+  }
 }
 .content::-webkit-scrollbar {
   display: none;
 }
-.content ul {
-  padding: 0;
-  margin: 0;
-}
-.item {
-  width: 100%;
-  height: 45px;
-  min-height: 45px;
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.item i.co {
-  position: absolute;
-  font-size: 25px;
-  padding-left: 5px;
-  left: 15px;
-  top: 10px;
-}
-
-.item {
-  i.co:hover {
-    cursor: pointer;
-  }
-
-  p.text {
-    position: absolute;
-    padding: 6px;
-    margin: 0;
-    font-size: 20px;
-    left: 50px;
-    top: 5px;
-    background-color: #fff;
-    max-width: 100%;
-  }
-}
-
 .fa-check-circle {
   color: #6eb200;
 }
@@ -106,16 +120,7 @@ body {
   text-decoration: line-through;
   color: #ccc;
 }
-.item i.de {
-  position: absolute;
-  font-size: 25px;
-  right: 15px;
-  top: 10px;
-}
-.item i.de:hover {
-  color: #af0000;
-  cursor: pointer;
-}
+
 /* ------------ add item ------------ */
 .add-to-do {
   position: relative;
@@ -163,12 +168,6 @@ body {
     font-size: 20px;
   }
 }
-
-// .footer {
-//   position: absolute;
-//   width: 100%;
-//   bottom: 0;
-// }
 
 html,
 body {
